@@ -1,0 +1,628 @@
+{
+  "datasets": [
+    {
+      "name": "d01d83d7",
+      "displayName": "coal_co2_emission_regional",
+      "config": {
+        "version": "1.1",
+        "source": "dbr_dev.radekgryciukk.coal_co2_emission_regional",
+        "dimensions": [
+          {
+            "name": "region",
+            "expr": "source.region",
+            "displayName": "Region"
+          },
+          {
+            "name": "subregion",
+            "expr": "source.subregion",
+            "displayName": "Subregion"
+          }
+        ],
+        "measures": [
+          {
+            "name": "total_coal_co2",
+            "expr": "SUM(source.total_coal_co2_2022)",
+            "displayName": "Total Coal CO2"
+          },
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "a5eb8ac7",
+      "displayName": "co2_owid_data",
+      "config": {
+        "version": "1.1",
+        "source": "dbr_dev.radekgryciukk.co2_owid_data",
+        "dimensions": [
+          {
+            "name": "country",
+            "expr": "source.country",
+            "displayName": "Country"
+          },
+          {
+            "name": "year",
+            "expr": "source.year",
+            "displayName": "Year"
+          },
+          {
+            "name": "iso_code",
+            "expr": "source.iso_code",
+            "displayName": "Iso Code"
+          },
+          {
+            "name": "population",
+            "expr": "source.population",
+            "displayName": "Population"
+          },
+          {
+            "name": "gdp",
+            "expr": "source.gdp",
+            "displayName": "Gdp"
+          },
+          {
+            "name": "cement_co2",
+            "expr": "source.cement_co2",
+            "displayName": "Cement Co 2"
+          },
+          {
+            "name": "cement_co2_per_capita",
+            "expr": "source.cement_co2_per_capita",
+            "displayName": "Cement Co 2 Per Capita"
+          },
+          {
+            "name": "co2",
+            "expr": "source.co2",
+            "displayName": "Co 2"
+          },
+          {
+            "name": "co2_growth_abs",
+            "expr": "source.co2_growth_abs",
+            "displayName": "Co 2 Growth Abs"
+          },
+          {
+            "name": "co2_growth_prct",
+            "expr": "source.co2_growth_prct",
+            "displayName": "Co 2 Growth Prct"
+          },
+          {
+            "name": "co2_including_luc",
+            "expr": "source.co2_including_luc",
+            "displayName": "Co 2 Including Luc"
+          },
+          {
+            "name": "co2_including_luc_growth_abs",
+            "expr": "source.co2_including_luc_growth_abs",
+            "displayName": "Co 2 Including Luc Growth Abs"
+          },
+          {
+            "name": "co2_including_luc_growth_prct",
+            "expr": "source.co2_including_luc_growth_prct",
+            "displayName": "Co 2 Including Luc Growth Prct"
+          },
+          {
+            "name": "co2_including_luc_per_capita",
+            "expr": "source.co2_including_luc_per_capita",
+            "displayName": "Co 2 Including Luc Per Capita"
+          },
+          {
+            "name": "co2_including_luc_per_gdp",
+            "expr": "source.co2_including_luc_per_gdp",
+            "displayName": "Co 2 Including Luc Per Gdp"
+          },
+          {
+            "name": "co2_including_luc_per_unit_energy",
+            "expr": "source.co2_including_luc_per_unit_energy",
+            "displayName": "Co 2 Including Luc Per Unit Energy"
+          },
+          {
+            "name": "co2_per_capita",
+            "expr": "source.co2_per_capita",
+            "displayName": "Co 2 Per Capita"
+          },
+          {
+            "name": "co2_per_gdp",
+            "expr": "source.co2_per_gdp",
+            "displayName": "Co 2 Per Gdp"
+          },
+          {
+            "name": "co2_per_unit_energy",
+            "expr": "source.co2_per_unit_energy",
+            "displayName": "Co 2 Per Unit Energy"
+          },
+          {
+            "name": "coal_co2",
+            "expr": "source.coal_co2",
+            "displayName": "Coal Co 2"
+          },
+          {
+            "name": "coal_co2_per_capita",
+            "expr": "source.coal_co2_per_capita",
+            "displayName": "Coal Co 2 Per Capita"
+          },
+          {
+            "name": "consumption_co2",
+            "expr": "source.consumption_co2",
+            "displayName": "Consumption Co 2"
+          },
+          {
+            "name": "consumption_co2_per_capita",
+            "expr": "source.consumption_co2_per_capita",
+            "displayName": "Consumption Co 2 Per Capita"
+          },
+          {
+            "name": "consumption_co2_per_gdp",
+            "expr": "source.consumption_co2_per_gdp",
+            "displayName": "Consumption Co 2 Per Gdp"
+          },
+          {
+            "name": "cumulative_cement_co2",
+            "expr": "source.cumulative_cement_co2",
+            "displayName": "Cumulative Cement Co 2"
+          },
+          {
+            "name": "cumulative_co2",
+            "expr": "source.cumulative_co2",
+            "displayName": "Cumulative Co 2"
+          },
+          {
+            "name": "cumulative_co2_including_luc",
+            "expr": "source.cumulative_co2_including_luc",
+            "displayName": "Cumulative Co 2 Including Luc"
+          },
+          {
+            "name": "cumulative_coal_co2",
+            "expr": "source.cumulative_coal_co2",
+            "displayName": "Cumulative Coal Co 2"
+          },
+          {
+            "name": "cumulative_flaring_co2",
+            "expr": "source.cumulative_flaring_co2",
+            "displayName": "Cumulative Flaring Co 2"
+          },
+          {
+            "name": "cumulative_gas_co2",
+            "expr": "source.cumulative_gas_co2",
+            "displayName": "Cumulative Gas Co 2"
+          },
+          {
+            "name": "cumulative_luc_co2",
+            "expr": "source.cumulative_luc_co2",
+            "displayName": "Cumulative Luc Co 2"
+          },
+          {
+            "name": "cumulative_oil_co2",
+            "expr": "source.cumulative_oil_co2",
+            "displayName": "Cumulative Oil Co 2"
+          },
+          {
+            "name": "cumulative_other_co2",
+            "expr": "source.cumulative_other_co2",
+            "displayName": "Cumulative Other Co 2"
+          },
+          {
+            "name": "energy_per_capita",
+            "expr": "source.energy_per_capita",
+            "displayName": "Energy Per Capita"
+          },
+          {
+            "name": "energy_per_gdp",
+            "expr": "source.energy_per_gdp",
+            "displayName": "Energy Per Gdp"
+          },
+          {
+            "name": "flaring_co2",
+            "expr": "source.flaring_co2",
+            "displayName": "Flaring Co 2"
+          },
+          {
+            "name": "flaring_co2_per_capita",
+            "expr": "source.flaring_co2_per_capita",
+            "displayName": "Flaring Co 2 Per Capita"
+          },
+          {
+            "name": "gas_co2",
+            "expr": "source.gas_co2",
+            "displayName": "Gas Co 2"
+          },
+          {
+            "name": "gas_co2_per_capita",
+            "expr": "source.gas_co2_per_capita",
+            "displayName": "Gas Co 2 Per Capita"
+          },
+          {
+            "name": "ghg_excluding_lucf_per_capita",
+            "expr": "source.ghg_excluding_lucf_per_capita",
+            "displayName": "Ghg Excluding Lucf Per Capita"
+          },
+          {
+            "name": "ghg_per_capita",
+            "expr": "source.ghg_per_capita",
+            "displayName": "Ghg Per Capita"
+          },
+          {
+            "name": "land_use_change_co2",
+            "expr": "source.land_use_change_co2",
+            "displayName": "Land Use Change Co 2"
+          },
+          {
+            "name": "land_use_change_co2_per_capita",
+            "expr": "source.land_use_change_co2_per_capita",
+            "displayName": "Land Use Change Co 2 Per Capita"
+          },
+          {
+            "name": "methane",
+            "expr": "source.methane",
+            "displayName": "Methane"
+          },
+          {
+            "name": "methane_per_capita",
+            "expr": "source.methane_per_capita",
+            "displayName": "Methane Per Capita"
+          },
+          {
+            "name": "nitrous_oxide",
+            "expr": "source.nitrous_oxide",
+            "displayName": "Nitrous Oxide"
+          },
+          {
+            "name": "nitrous_oxide_per_capita",
+            "expr": "source.nitrous_oxide_per_capita",
+            "displayName": "Nitrous Oxide Per Capita"
+          },
+          {
+            "name": "oil_co2",
+            "expr": "source.oil_co2",
+            "displayName": "Oil Co 2"
+          },
+          {
+            "name": "oil_co2_per_capita",
+            "expr": "source.oil_co2_per_capita",
+            "displayName": "Oil Co 2 Per Capita"
+          },
+          {
+            "name": "other_co2_per_capita",
+            "expr": "source.other_co2_per_capita",
+            "displayName": "Other Co 2 Per Capita"
+          },
+          {
+            "name": "other_industry_co2",
+            "expr": "source.other_industry_co2",
+            "displayName": "Other Industry Co 2"
+          },
+          {
+            "name": "primary_energy_consumption",
+            "expr": "source.primary_energy_consumption",
+            "displayName": "Primary Energy Consumption"
+          },
+          {
+            "name": "share_global_cement_co2",
+            "expr": "source.share_global_cement_co2",
+            "displayName": "Share Global Cement Co 2"
+          },
+          {
+            "name": "share_global_co2",
+            "expr": "source.share_global_co2",
+            "displayName": "Share Global Co 2"
+          },
+          {
+            "name": "share_global_co2_including_luc",
+            "expr": "source.share_global_co2_including_luc",
+            "displayName": "Share Global Co 2 Including Luc"
+          },
+          {
+            "name": "share_global_coal_co2",
+            "expr": "source.share_global_coal_co2",
+            "displayName": "Share Global Coal Co 2"
+          },
+          {
+            "name": "share_global_cumulative_cement_co2",
+            "expr": "source.share_global_cumulative_cement_co2",
+            "displayName": "Share Global Cumulative Cement Co 2"
+          },
+          {
+            "name": "share_global_cumulative_co2",
+            "expr": "source.share_global_cumulative_co2",
+            "displayName": "Share Global Cumulative Co 2"
+          },
+          {
+            "name": "share_global_cumulative_co2_including_luc",
+            "expr": "source.share_global_cumulative_co2_including_luc",
+            "displayName": "Share Global Cumulative Co 2 Including Luc"
+          },
+          {
+            "name": "share_global_cumulative_coal_co2",
+            "expr": "source.share_global_cumulative_coal_co2",
+            "displayName": "Share Global Cumulative Coal Co 2"
+          },
+          {
+            "name": "share_global_cumulative_flaring_co2",
+            "expr": "source.share_global_cumulative_flaring_co2",
+            "displayName": "Share Global Cumulative Flaring Co 2"
+          },
+          {
+            "name": "share_global_cumulative_gas_co2",
+            "expr": "source.share_global_cumulative_gas_co2",
+            "displayName": "Share Global Cumulative Gas Co 2"
+          },
+          {
+            "name": "share_global_cumulative_luc_co2",
+            "expr": "source.share_global_cumulative_luc_co2",
+            "displayName": "Share Global Cumulative Luc Co 2"
+          },
+          {
+            "name": "share_global_cumulative_oil_co2",
+            "expr": "source.share_global_cumulative_oil_co2",
+            "displayName": "Share Global Cumulative Oil Co 2"
+          },
+          {
+            "name": "share_global_cumulative_other_co2",
+            "expr": "source.share_global_cumulative_other_co2",
+            "displayName": "Share Global Cumulative Other Co 2"
+          },
+          {
+            "name": "share_global_flaring_co2",
+            "expr": "source.share_global_flaring_co2",
+            "displayName": "Share Global Flaring Co 2"
+          },
+          {
+            "name": "share_global_gas_co2",
+            "expr": "source.share_global_gas_co2",
+            "displayName": "Share Global Gas Co 2"
+          },
+          {
+            "name": "share_global_luc_co2",
+            "expr": "source.share_global_luc_co2",
+            "displayName": "Share Global Luc Co 2"
+          },
+          {
+            "name": "share_global_oil_co2",
+            "expr": "source.share_global_oil_co2",
+            "displayName": "Share Global Oil Co 2"
+          },
+          {
+            "name": "share_global_other_co2",
+            "expr": "source.share_global_other_co2",
+            "displayName": "Share Global Other Co 2"
+          },
+          {
+            "name": "share_of_temperature_change_from_ghg",
+            "expr": "source.share_of_temperature_change_from_ghg",
+            "displayName": "Share Of Temperature Change From Ghg"
+          },
+          {
+            "name": "temperature_change_from_ch4",
+            "expr": "source.temperature_change_from_ch4",
+            "displayName": "Temperature Change From Ch 4"
+          },
+          {
+            "name": "temperature_change_from_co2",
+            "expr": "source.temperature_change_from_co2",
+            "displayName": "Temperature Change From Co 2"
+          },
+          {
+            "name": "temperature_change_from_ghg",
+            "expr": "source.temperature_change_from_ghg",
+            "displayName": "Temperature Change From Ghg"
+          },
+          {
+            "name": "temperature_change_from_n2o",
+            "expr": "source.temperature_change_from_n2o",
+            "displayName": "Temperature Change From N 2 O"
+          },
+          {
+            "name": "total_ghg",
+            "expr": "source.total_ghg",
+            "displayName": "Total Ghg"
+          },
+          {
+            "name": "total_ghg_excluding_lucf",
+            "expr": "source.total_ghg_excluding_lucf",
+            "displayName": "Total Ghg Excluding Lucf"
+          },
+          {
+            "name": "trade_co2",
+            "expr": "source.trade_co2",
+            "displayName": "Trade Co 2"
+          },
+          {
+            "name": "trade_co2_share",
+            "expr": "source.trade_co2_share",
+            "displayName": "Trade Co 2 Share"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "co2_by_fuel_region",
+      "displayName": "CO2 by Fuel Type and Region",
+      "config": {
+        "version": "1.1",
+        "source": "SELECT country AS region, 'Coal' AS fuel_type, coal_co2 AS co2_value FROM dbr_dev.radekgryciukk.co2_owid_data WHERE year = (SELECT MAX(year) FROM dbr_dev.radekgryciukk.co2_owid_data WHERE coal_co2 IS NOT NULL)\n  AND iso_code IS NULL\n  AND country <> 'World'\n  AND coal_co2 IS NOT NULL\nUNION ALL SELECT country AS region, 'Oil' AS fuel_type, oil_co2 AS co2_value FROM dbr_dev.radekgryciukk.co2_owid_data WHERE year = (SELECT MAX(year) FROM dbr_dev.radekgryciukk.co2_owid_data WHERE oil_co2 IS NOT NULL)\n  AND iso_code IS NULL\n  AND country <> 'World'\n  AND oil_co2 IS NOT NULL\nUNION ALL SELECT country AS region, 'Gas' AS fuel_type, gas_co2 AS co2_value FROM dbr_dev.radekgryciukk.co2_owid_data WHERE year = (SELECT MAX(year) FROM dbr_dev.radekgryciukk.co2_owid_data WHERE gas_co2 IS NOT NULL)\n  AND iso_code IS NULL\n  AND country <> 'World'\n  AND gas_co2 IS NOT NULL\n",
+        "dimensions": [
+          {
+            "name": "region",
+            "expr": "region",
+            "displayName": "Region"
+          },
+          {
+            "name": "fuel_type",
+            "expr": "fuel_type",
+            "displayName": "Fuel Type"
+          }
+        ],
+        "measures": [
+          {
+            "name": "total_co2",
+            "expr": "SUM(co2_value)",
+            "displayName": "Total CO2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "top10_countries_co2",
+      "displayName": "Top 10 Countries by Total CO2",
+      "config": {
+        "version": "1.1",
+        "source": "SELECT country, SUM(co2) AS total_co2 FROM dbr_dev.radekgryciukk.co2_owid_data WHERE iso_code IS NOT NULL\n  AND iso_code <> ''\n  AND co2 IS NOT NULL\nGROUP BY country ORDER BY total_co2 DESC LIMIT 10\n",
+        "dimensions": [
+          {
+            "name": "country",
+            "expr": "country",
+            "displayName": "Country"
+          }
+        ],
+        "measures": [
+          {
+            "name": "total_co2",
+            "expr": "SUM(total_co2)",
+            "displayName": "Total CO2 (Mt)"
+          }
+        ]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "name": "53aec2e6",
+      "displayName": "CO2 emission",
+      "layout": [
+        {
+          "widget": {
+            "name": "d7a9be24",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d01d83d7",
+                  "fields": [
+                    {
+                      "name": "measure(total_coal_co2)",
+                      "expression": "MEASURE(`total_coal_co2`)"
+                    },
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Total Coal CO2 Emissions by Region"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "measure(total_coal_co2)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "region",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "95b8dc76",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "top10_countries_co2",
+                  "fields": [
+                    {
+                      "name": "country",
+                      "expression": "`country`"
+                    },
+                    {
+                      "name": "measure(total_co2)",
+                      "expression": "MEASURE(`total_co2`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Top 10 Countries by Total CO2 Emissions"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "country",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "measure(total_co2)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
